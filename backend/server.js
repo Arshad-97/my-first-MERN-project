@@ -17,6 +17,11 @@ connection.once('open', () => {
     console.log("MongoDB database connection estabalised succefully");
 })
 
+const excerciseRouter = require('./routes/excercises');
+const userRouter = require('./routes/users');
+
+app.use('/excercises',excerciseRouter);
+app.use('/users',userRouter);
 
 app.listen(port, () => {
     console.log(`server is running on port: ${port}`);
