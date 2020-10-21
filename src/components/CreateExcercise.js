@@ -63,17 +63,18 @@ export default class CreateExcercise extends Component {
 
         const excercise = {
             username: this.state.username,
-            discription: this.state.discription,
+            description: this.state.discription,
             duration: this.state.duration,
             date: this.state.date
         }
 
         console.log(excercise);
 
-        axios.post('http://localhost:5000/excercises/add', excercise)
+        axios.post('http://localhost:5000/excercises/add',excercise)
             .then(res => console.log(res.data))
             .catch(error => console.error(error))
-        // window.location = '/';
+            
+         window.location = '/';
     }
     render() {
         return (
