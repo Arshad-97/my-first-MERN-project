@@ -15,7 +15,7 @@ export default class CreateExcercise extends Component {
 
         this.state = {
             username: '',
-            discription: '',
+            description: '',
             duration: 0,
             date: new Date(),
             users: []
@@ -42,7 +42,7 @@ export default class CreateExcercise extends Component {
 
     onChangeDiscription(e) {
         this.setState({
-            discription: e.target.value
+            description: e.target.value
         });
     }
 
@@ -63,7 +63,7 @@ export default class CreateExcercise extends Component {
 
         const excercise = {
             username: this.state.username,
-            description: this.state.discription,
+            description: this.state.description,
             duration: this.state.duration,
             date: this.state.date
         }
@@ -104,7 +104,7 @@ export default class CreateExcercise extends Component {
                             type="text"
                             className="form-control"
                             onChange={this.onChangeDiscription}
-                            value={this.state.discription}>
+                            value={this.state.description}>
                         </input>
                     </div>
                     <div className="form-group">
