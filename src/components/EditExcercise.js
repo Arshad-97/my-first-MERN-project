@@ -33,7 +33,6 @@ export default class EditExcercise extends Component {
                 })
             })
 
-
         axios.get('http://localhost:5000/users/')
             .then(res => {
                 if (res.data.length > 0) {
